@@ -1,11 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 import Section from './section';
+import { data } from '../data';
 
 const Home = () => {
+  console.log(data);
   return (
     <Container>
-      <Section />
+      {
+        data.map(data => {
+          return (
+            <>
+              <Section
+                key={data.id}
+                title={data.title}
+                description={data.description}
+                backgroundImage={data.image}
+                leftButtonText={data.leftButtonText}
+                rightButtonText={data.rightButtonText}
+              />
+            </>
+          )
+        })
+      }
     </Container>
   )
 }
