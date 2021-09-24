@@ -20,7 +20,7 @@ const Section = ({ title, description, leftButtonText, rightButtonText, backgrou
             }
           </ButtonGroup>
         </Fade>
-        <DownArrow src='./assets/images/down-arrow.svg' />
+        <DownArrow src='../../src/assets/images/down-arrow.svg' />
       </div>
     </Wrap >
   )
@@ -37,7 +37,7 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: ${props => `url('./assets/images/${props.bgImage}')`} ;
+  background-image: ${props => `url('../../src/assets/images/${props.bgImage}')`} ;
 `
 const ItemText = styled.div`
   padding-top: 15vh;
