@@ -4,6 +4,8 @@ import Fade from 'react-reveal/Fade';
 
 const Section = ({ title, description, leftButtonText, rightButtonText, backgroundImage }) => {
   return (
+    <div id={title}>
+
     <Wrap bgImage={backgroundImage}>
       <Fade bottom>
         <ItemText>
@@ -20,9 +22,10 @@ const Section = ({ title, description, leftButtonText, rightButtonText, backgrou
             }
           </ButtonGroup>
         </Fade>
-        <DownArrow src='../../src/assets/images/down-arrow.svg' />
+        <DownArrow src='/images/down-arrow.svg' />
       </div>
     </Wrap >
+    </div>
   )
 }
 export default Section;
@@ -37,7 +40,7 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: ${props => `url('../../src/assets/images/${props.bgImage}')`} ;
+  background-image: ${props => `url('/images/${props.bgImage}')`} ;
 `
 const ItemText = styled.div`
   padding-top: 15vh;
